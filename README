@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4892
+
+Tim Pope vim-haml fork to highlight Less syntax correctly (mostly).
+
+This is a very rough modification of Tim syntax files to highlight Less syntax, and despite my lack of knowledge in Vim scripting, it works quite well.
+
+Updated version on https://github.com/genoma/vim-less
