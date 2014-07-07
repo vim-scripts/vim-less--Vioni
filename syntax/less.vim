@@ -21,7 +21,7 @@ runtime! syntax/css.vim
 syn case ignore
 
 syn cluster lessCssProperties contains=cssFontProp,cssFontDescriptorProp,cssColorProp,cssTextProp,cssBoxProp,cssGeneratedContentProp,cssPagingProp,cssUIProp,cssRenderProp,cssAuralProp,cssTableProp
-syn cluster lessCssAttributes contains=css.*Attr,lessEndOfLineComment,scssComment,cssValue.*,cssColor,cssURL,lessDefault,cssImportant,cssError,cssStringQ,cssStringQQ,cssFunction,cssUnicodeEscape,cssRenderProp
+syn cluster lessCssAttributes contains=css.*Attr,lessEndOfLineComment,lessComment,cssValue.*,cssColor,cssURL,lessDefault,cssImportant,cssError,cssStringQ,cssStringQQ,cssFunction,cssUnicodeEscape,cssRenderProp
 
 syn region lessDefinition matchgroup=cssBraces start="{" end="}" contains=TOP
 
@@ -69,17 +69,16 @@ syn keyword lessFunction multiply screen overlay softlight hardlight difference 
 " syn match lessReturn "\%([{};]\s*\|^\s*\)\@<=@return"
 
 syn match lessEscape     "^\s*\zs\\"
-syn match lessIdChar     "#[[:alnum:]_-]\@=" nextgroup=lessId
+syn match lessIdChar     "#[[:alnum:]_-]\@=" nextgroup=lessId,lessClassIdCall
 syn match lessId         "[[:alnum:]_-]\+" contained
+syn match lessClassIdCall  "[[:alnum:]_-]\+()" contained
+
 syn match lessClassChar  "\.[[:alnum:]_-]\@=" nextgroup=lessClass,lessClassCall
 syn match lessClass      "[[:alnum:]_-]\+" contained
 syn match lessClassCall  "[[:alnum:]_-]\+()" contained
 
-syn match lessCallIdChar   "#[[:alnum:]_-]\@=" nextgroup=lessCallId,lessClassIdCall
-syn match lessClassId      "[[:alnum:]_-]\+()" contained
-syn match lessClassIdCall  "[[:alnum:]_-]\+()" contained
 
-syn match lessAmpersand  "&"
+syn match lessAmpersand  "&" contains=lessIdChar,lessClassChar
 
 syn region lessInclude start="@import" end=";\|$" contains=lessComment,cssURL,cssUnicodeEscape,cssMediaType,cssStringQ,cssStringQQ
 " syn region lessDebugLine end=";\|$" matchgroup=lessDebug start="@debug\>" contains=@lessCssAttributes,lessVariable,lessFunction
@@ -114,7 +113,7 @@ hi def link lessEscape                  Special
 hi def link lessIdChar                  Special
 hi def link lessClassChar               Special
 " hi def link lessInterpolationDelimiter  Delimiter
-" hi def link lessAmpersand               Character
+hi def link lessAmpersand               Character
 hi def link lessId                      Identifier
 hi def link lessClass                   Type
 hi def link lessCssAttribute            PreProc
