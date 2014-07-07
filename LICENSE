@@ -1,35 +1,3 @@
-vim-less
-========
-
-![vim-less syntax highlighting](https://github.com/genoma/vim-less/raw/master/vim.png)
-
-Tim Pope [vim-haml](http://www.vim.org/scripts/script.php?script_id=1433) fork to highlight Less syntax correctly (mostly).
-
-This is a very rough modification of Tim syntax files to highlight Less syntax.
-
-# Installing
-
-Using [Vundle](https://github.com/gmarik/vundle), add this to your `.vimrc` file:
-
-`Bundle 'genoma/vim-less'`
-
-Using [Pathogen](https://github.com/tpope/vim-pathogen) clone this repository in `'~/.vim/bundle'`:
-
-`$ cd ~/.vim/bundle`
-`$ git clone https://github.com/genoma/vim-less.git`
-
-# Contributing
-
-There are a bunch of issues right now that need attention:
-
-- [ ] `@media` queries are identified as less variables
-- [ ] `div { font-size: 20px; }` written on one line, is identified as `cssDeprecated`
-- [ ] The code is in need of some cleaning
-
-If you find yourself having some free time on your hands and want to contribute, i strongly encurage you to do so.
-
-# License
-
 The MIT License (MIT)
 
 Copyright (c) 2014 Alessandro Vioni
