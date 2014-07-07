@@ -22,8 +22,8 @@ Using [Pathogen](https://github.com/tpope/vim-pathogen) clone this repository in
 
 There are a bunch of issues right now that need attention:
 
-- [ ] `@media` queries are identified as less variables
-- [ ] `div { font-size: 20px; }` written on one line, is identified as `cssDeprecated`
+- [x] `@media` queries are identified as less variables
+- [x] `div { font-size: 20px; }` written on one line, is identified as `cssDeprecated` (fixed with a temporary workaround)
 - [ ] The code is in need of some cleaning
 
 If you find yourself having some free time on your hands and want to contribute, i strongly encurage you to do so.
