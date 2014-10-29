@@ -1,11 +1,11 @@
 vim-less
 ========
 
-![vim-less syntax highlighting](https://github.com/genoma/vim-less/raw/master/vim.png)
+![vim-less syntax highlighting](https://raw.githubusercontent.com/genoma/vim-less/master/less.jpeg)
 
-Tim Pope [vim-haml](http://www.vim.org/scripts/script.php?script_id=1433) fork to highlight Less syntax correctly (mostly).
+### Tim Pope [vim-haml](http://www.vim.org/scripts/script.php?script_id=1433) fork to highlight Less syntax correctly.
 
-This is a very rough modification of Tim syntax files to highlight Less syntax.
+<br><br>
 
 # Installing
 
@@ -18,19 +18,20 @@ Using [Pathogen](https://github.com/tpope/vim-pathogen) clone this repository in
 `$ cd ~/.vim/bundle`
 `$ git clone https://github.com/genoma/vim-less.git`
 
-# Dependencies
 
-You can enable support to CSS3 improved syntax highlighting installing [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
+<br>
+
+# :warning: Mandatory Dependencies
+
+### For the syntax files to work correctly you need to install the latest CSS runtime files from [Jules Wang repository](https://github.com/JulesWang/css.vim) :heavy_exclamation_mark:
+
+<br><br>
 
 # Contributing
 
-There are a bunch of issues right now that need attention:
+If you find yourself having some free time on your hands and want to contribute, i strongly encourage you to do so.
 
-- [x] ~~`@media` queries are identified as less variables~~
-- [x] ~~`div { font-size: 20px; }` written on one line, is identified as `cssDeprecated`~~ (fixed with a temporary workaround)
-- [x] ~~The code is in need of some cleaning~~
-
-If you find yourself having some free time on your hands and want to contribute, i strongly encurage you to do so.
+<br>
 
 # License
 
